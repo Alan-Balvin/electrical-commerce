@@ -1,7 +1,14 @@
 import { useEffect, useState } from "react";
 import { API_URL, API_KEY } from "../aws/config"; // Importamos la configuración
 
+//json temporal
+import { useCart } from '../context/CartContext';
+import lights from '../data/lights.json';
+import './HomePage.css'; // Importamos el archivo CSS
+
 function HomePage() {
+  //API false:
+  const { addToCart } = useCart();
   const [message, setMessage] = useState("Loading...");
 
   useEffect(() => {
@@ -40,9 +47,23 @@ function HomePage() {
   }, []);
 
   return (
-    <div>
-      <h1>Welcome to the Home Page</h1>
-      <p>API Response: {message}</p>
+    <div className="homepage">
+      <h1 className="homepage-title">Welcome to the Home Page</h1>
+      <p className="api-message">API Response: {message}</p>
+
+      <h2 className="products-title">Modern Lights</h2>
+      <div className="products">
+        {lights.map((item) => (
+          <div key={item.id} className="product-card">
+            <img src={item.image} alt={item.name} className="product-image" />
+            <h3 className="product-name">{item.name}</h3>
+            <p className="product-price">{item.price} MXN</p>
+            <button className="add-to-cart-button" onClick={() => addToCart(item)}>
+              Agregar al carrito
+            </button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

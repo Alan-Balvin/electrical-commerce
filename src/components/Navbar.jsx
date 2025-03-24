@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import './Navbar.css'; // Importa el archivo CSS
 
 function Navbar() {
   return (
-    <nav>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/cart">Cart</Link></li>
+    <nav className="navbar">
+      <ul className="navbar-list">
+        <li className="navbar-item"><Link to="/" className="navbar-link">Home</Link></li>
+        <li className="navbar-item"><Link to="/cart" className="navbar-link">Cart</Link></li>
       </ul>
     </nav>
   );

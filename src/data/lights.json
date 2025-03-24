@@ -1,0 +1,6 @@
+[
+    { "id": 1, "name": "Luminaria LED Moderna", "price": 1200, "image": "https://img5.su-cdn.com/cdn-cgi/image/width=1000,height=1000,format=webp/mall/file/2022/03/18/8c6c64d19c61416a83d327da2cdf7f6b.jpg" },
+    { "id": 2, "name": "Lámpara de Pared Minimalista", "price": 850, "image": "https://img5.su-cdn.com/cdn-cgi/image/width=1000,height=1000,format=webp/mall/file/2021/07/23/adaa915213464ffe819e09f6c66dbae5.jpg" },
+    { "id": 3, "name": "Lámpara de Techo Vintage", "price": 1600, "image": "https://img5.su-cdn.com/cdn-cgi/image/width=1000,height=1000,format=webp/mall/file/2025/01/10/1000x1000_fb975dc166c10e23da4ab28783647699.jpg" }
+  ]
+  
